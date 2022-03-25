@@ -2,21 +2,25 @@ import java.util.HashMap;
 
 public class diccionario implements Comparable<diccionario> {
 
-    private HashMap palabras;
+    private HashMap<String, String> palabras;
     private String ingles;
-    private int count;
     
     
-    public diccionario(String leng1, HashMap palab){
+    public diccionario(String leng1, HashMap<String, String> palab){
         this.ingles = leng1;
         this.palabras = palab;
-        this.count = 0;
     }
 
+    public String getName(){
+        return this.ingles;
+    }
+    public HashMap<String, String> getHashMap(){
+        return this.palabras;
+    }
 
 
     @Override
     public int compareTo(diccionario other) {
-        return Integer.compare(this.count, other.count);
+        return this.ingles.compareTo(other.ingles);
     }
 }
