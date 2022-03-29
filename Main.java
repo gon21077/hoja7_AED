@@ -11,10 +11,7 @@ public class Main {
     static String path = "diccionario.txt";
     static String path1 = "texto.txt";
     static String line = null;
-    static ArrayList<String> a = new ArrayList<String>();
-    static ArrayList<String> b = new ArrayList<>();
-    static ArrayList<String[]> c = new ArrayList<>();
-    static ArrayList<String[]> d = new ArrayList<>();
+    
 
     public static void leerArchivo(String pat, ArrayList<String> p){
         try {
@@ -30,6 +27,10 @@ public class Main {
         }
     }
     public static void main(String[] args){
+        ArrayList<String> a = new ArrayList<String>();
+        ArrayList<String> b = new ArrayList<>();
+        ArrayList<String[]> c = new ArrayList<>();
+        ArrayList<String[]> d = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
         leerArchivo(path, a);
         for (int i = 0; i<a.size(); i++){
