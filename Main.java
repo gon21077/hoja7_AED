@@ -41,7 +41,7 @@ public class Main {
         ArrayList<String> a = new ArrayList<String>();
         ArrayList<String> b = new ArrayList<>();
         ArrayList<String[]> c = new ArrayList<>();
-        ArrayList<String[]> d = new ArrayList<>();
+        ArrayList<String> d = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
         leerArchivo(path, a);
         for (int i = 0; i<a.size(); i++){
@@ -178,7 +178,7 @@ public class Main {
             String FinalTrad = "";
 
             for (String[] s: c){
-                
+                FinalTrad = "";
                 for (String t: s){
                     Boolean traducida = false;
                     
