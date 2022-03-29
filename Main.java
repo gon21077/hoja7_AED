@@ -4,6 +4,17 @@ import java.io.FileReader;
 import java.util.*;
 
 
+   
+/**
+ * Algoritmos y Estructura de Datos
+ * Universidad del Valle de Guatemala
+ * Hoja de Trabajo No.7
+ * File: Main
+ * @author Sebastián Franco - 21484
+ * @author Juan Miguel Gonzalez-Campo - 21077
+ * @version 1.1
+ * @since 28/03/2021
+ */
 
 public class Main {
     static BinarySearchTree ingles = new BinarySearchTree();
@@ -22,7 +33,7 @@ public class Main {
             while((line = reader.readLine()) != null){
                 p.add(line);
             }
-        } catch(Exception e){
+        } catch(Exception e){ ///Por si no hay Archivo
             System.out.println("Error al leer archivo");
         }
     }
@@ -34,7 +45,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         leerArchivo(path, a);
         for (int i = 0; i<a.size(); i++){
-            String x = a.get(i);
+            String x = a.get(i); 
             HashMap<String, String> ma = new HashMap<>();
             String[] str = x.split(",");
 
@@ -51,7 +62,8 @@ public class Main {
             
             ingles.insert(dic);
         }
-        List<diccionario> a1 = ingles.depthFirstSearch_InOrder();
+
+        List<diccionario> a1 = ingles.depthFirstSearch_InOrder(); 
         for (int x = 0; x < a1.size(); x++){
             System.out.println("\n"+a1.get(x).getName());
             for (Map.Entry entry : a1.get(x).getHashMap().entrySet())
